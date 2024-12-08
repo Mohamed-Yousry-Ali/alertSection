@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import "./App.css";
+import Alert from "./components/UI/Alert/Alert";
+import { Ban } from "lucide-react";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <Alert
+        type={"alert-danger"}
+        icon={<Ban size={20} />}
+        title={"Some Thing Wrong"}
+        description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil ex atque
+        tenetur obcaecati maxime voluptate commodi veritatis facilis sunt quas ."
+      >
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Lorem ipsum dolor sit amet <a href="/">consectetur</a>, adipisicing
+          elit. Nihil ex atque tenetur obcaecati maxime voluptate commodi
+          veritatis facilis sunt quas .
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </Alert>
+      <Alert
+        type={"alert-warning"}
+        icon={<Ban size={20} />}
+        title={"Some Thing Wrong"}
+        description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil ex atque
+        tenetur obcaecati maxime voluptate commodi veritatis facilis sunt quas ."
+      />
+      <Alert
+        type={"alert-info"}
+        icon={<Ban size={20} />}
+        title={"Some Thing Wrong"}
+        description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil ex atque
+        tenetur obcaecati maxime voluptate commodi veritatis facilis sunt quas ."
+      />
+      <Alert
+        type={"alert-success"}
+        icon={<Ban size={20} />}
+        title={"Some Thing Wrong"}
+        description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil ex atque
+        tenetur obcaecati maxime voluptate commodi veritatis facilis sunt quas ."
+      />
+      <Alert
+        type={"alert-default"}
+        icon={<Ban size={20} />}
+        title={"Some Thing Wrong"}
+        description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil ex atque
+        tenetur obcaecati maxime voluptate commodi veritatis facilis sunt quas ."
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
